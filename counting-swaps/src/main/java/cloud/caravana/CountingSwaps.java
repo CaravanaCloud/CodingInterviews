@@ -4,6 +4,10 @@ import java.util.*;
 
 public class CountingSwaps {
     public static Integer countSwaps(List<Integer> xs){
+        return naiveSwaps(xs);
+    }
+
+    public static Integer naiveSwaps(List<Integer> xs){
         if (xs == null) return 0;
         Integer count = 0;
         for (int i = 0; i < xs.size() - 1 ; i++) {
