@@ -10,9 +10,12 @@ phases:
     commands:
       - echo Entered the build phase...
       - mvn -Dmaven.test.failure.ignore=true --fail-at-end test
-      - mvn surefire-report:report-only
+      - mvn surefire-report:report  -Daggregate=true
       - mvn site -DgenerateReports=false
   post_build:
     commands:
       - echo Entered the post_build phase...
       - aws s3 sync target/site/ s3://codinginterviews.caravana.cloud --delete
+cache:
+  paths:
+    - '/root/.m2/**/*'
