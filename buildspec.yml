@@ -9,7 +9,9 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn surefire-report:report -Daggregate=true
+      - mvn -Dmaven.test.failure.ignore=true --fail-at-end test
+      - mvn surefire-report:report-only
+      - mvn site -DgenerateReports=false
   post_build:
     commands:
       - echo Entered the post_build phase...
