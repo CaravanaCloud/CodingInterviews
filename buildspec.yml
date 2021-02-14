@@ -5,9 +5,7 @@ phases:
     commands:
       - echo Entered the install phase.......
       - curl -s "https://get.sdkman.io" | bash
-      - source "/root/.sdkman/bin/sdkman-init.sh"
-      - sdk install java
-      - sdk install maven
+      - source "/root/.sdkman/bin/sdkman-init.sh" && sdk install java && sdk install maven
   build:
     commands:
       - echo Entered the build phase...
