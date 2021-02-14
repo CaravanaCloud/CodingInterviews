@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn test surefire-report:report -Daggregate=true
+      - mvn surefire-report:report -Daggregate=true
   post_build:
     commands:
       - echo Entered the post_build phase...
