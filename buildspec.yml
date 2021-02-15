@@ -16,7 +16,8 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - aws s3 sync target/site/ s3://codinginterviews.caravana.cloud/java/ --delete
+      - find .
+#- aws s3 sync target/site/ s3://codinginterviews.caravana.cloud/java/ --delete
 cache:
   paths:
     - '/root/.m2/**/*'
