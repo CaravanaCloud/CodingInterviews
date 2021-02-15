@@ -6,7 +6,7 @@ phases:
       - echo Entered the install phase as $USER
       - curl -s "https://get.sdkman.io" | bash
       - source "/root/.sdkman/bin/sdkman-init.sh" && sdk install java && sdk install maven
-      - pip install pytest
+      - pip install pytest pytest-html
   build:
     commands:
       - echo Entered the build phase...
