@@ -20,3 +20,4 @@ phases:
 cache:
   paths:
     - '/root/.m2/**/*'
+    - '/root/.sdkman/**/*'
