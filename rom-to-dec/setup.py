@@ -1,16 +1,13 @@
 from setuptools import setup, find_packages
 
+import romtodec
+
 setup(
-    name='helloworld',
+    name=romtodec.__name__,
+    version=romtodec.__version__,
+    author='Caravana Cloude',
+    author_email='code@caravana.cloud',
+    description='Example for a minimal Python project with pytest support',
     packages=find_packages(),
-    include_package_data=True,
-    install_requires=[
-        'flask',
-    ],
-    setup_requires=[
-        'pytest-runner',
-    ],
-    tests_require=[
-        'pytest',
-    ],
+    install_requires=[],  # e.g. ['numpy >= 1.11.1', 'matplotlib >= 1.5.1']
 )
