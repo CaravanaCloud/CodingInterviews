@@ -18,7 +18,7 @@ phases:
       - mv target/site/* target/reports/java/
 # Python
       - pushd rom-to-dec && pytest --html=../target/reports/python/rom-to-dec.html --self-contained-html && popd
-# Publish reports
+# Publish reports 
       - pwd
       - ls -liah
       - aws s3 sync target/reports/ s3://codinginterviews.caravana.cloud/ --delete
