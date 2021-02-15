@@ -12,9 +12,9 @@ phases:
       - echo Entered the build phase...
 # Java
       - mkdir -p target/reports/java/
-      - mvn -Dmaven.test.failure.ignore=true --fail-at-end test
-      - mvn surefire-report:report  -Daggregate=true
-      - mvn site -DgenerateReports=false
+      - mvn --no-transfer-progress -Dmaven.test.failure.ignore=true --fail-at-end test
+      - mvn --no-transfer-progress surefire-report:report  -Daggregate=true
+      - mvn --no-transfer-progress site -DgenerateReports=false
       - mv target/site/* target/reports/java/
 # Python
       - pushd rom-to-dec && pytest --html=../target/reports/python/rom-to-dec.html --self-contained-html && popd
