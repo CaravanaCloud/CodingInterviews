@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Entered the install phase as $USER
+      - echo Entered the install phase as $USER on $PWD
       - curl -s "https://get.sdkman.io" | bash
       - source "/root/.sdkman/bin/sdkman-init.sh" && sdk install java && sdk install maven
       - pip install pytest pytest-html
@@ -17,7 +17,7 @@ phases:
       - mvn site -DgenerateReports=false
       - mv target/site/* target/reports/java/
 # Python
-      - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html
+      - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html && popd
 # Up reports
       - aws s3 sync target/reports/ s3://codinginterviews.caravana.cloud/ --delete
 cache:
