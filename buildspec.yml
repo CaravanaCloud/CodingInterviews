@@ -17,7 +17,7 @@ phases:
       - mvn site -DgenerateReports=false
       - mv target/site/* target/reports/java/
 # Python
-      - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html && popd
+      - pushd rom-to-dec && pytest --html=../target/reports/python/rom-to-dec.html --self-contained-html && popd
 # Up reports
       - pwd
       - ls -liah
