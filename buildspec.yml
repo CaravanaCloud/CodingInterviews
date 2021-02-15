@@ -19,6 +19,8 @@ phases:
 # Python
       - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html && popd
 # Up reports
+      - pwd
+      - ls -liah
       - aws s3 sync target/reports/ s3://codinginterviews.caravana.cloud/ --delete
 cache:
   paths:
