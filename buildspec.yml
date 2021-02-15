@@ -9,12 +9,11 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mkdir -p target/reports
 # Java
+      - mkdir -p target/reports/java/
       - mvn -Dmaven.test.failure.ignore=true --fail-at-end test
       - mvn surefire-report:report  -Daggregate=true
       - mvn site -DgenerateReports=false
-      - mkdir reports/java/
       - mv target/site/* target/reports/java/
 # Python
       - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html
