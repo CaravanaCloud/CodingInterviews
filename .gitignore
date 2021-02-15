@@ -27,3 +27,7 @@ hs_err_pid*
 .idea
 *.iml
 target/
+
+*.pyc
+.eggs/
+*.egg-info

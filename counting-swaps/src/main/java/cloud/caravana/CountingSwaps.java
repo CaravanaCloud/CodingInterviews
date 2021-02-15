@@ -1,6 +1,9 @@
 package cloud.caravana;
 
+import static java.lang.String.join;
+
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CountingSwaps {
     public static Integer countSwaps(List<Integer> xs){
@@ -10,6 +13,7 @@ public class CountingSwaps {
     public static Integer naiveSwaps(List<Integer> xs){
         if (xs == null) return 0;
         Integer count = 0;
+        // System.out.println(xs);
         for (int i = 0; i < xs.size() - 1 ; i++) {
             for (int j = i+1; j < xs.size() ; j++) {
                 if ( xs.get(j) < xs.get(i) ){
@@ -17,6 +21,7 @@ public class CountingSwaps {
                     xs.set(i, xs.get(j));
                     xs.set(j, aux);
                     count += 1;
+                    // System.out.println(xs);
                 }
             }
         }

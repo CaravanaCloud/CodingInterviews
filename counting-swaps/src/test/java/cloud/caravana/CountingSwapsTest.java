@@ -48,6 +48,17 @@ public class CountingSwapsTest
     }
 
     @Test
+    public void testSmall() {
+        List<Integer> xs = new ArrayList<>();
+        xs.add(7);
+        xs.add(3);
+        xs.add(1);
+        xs.add(6);
+        Integer count = countSwaps(xs);
+        assertEquals((Integer) 4, count);
+    }
+
+    @Test
     public void testSingle() {
         List<Integer> xs = new ArrayList<>();
         xs.add(2);
