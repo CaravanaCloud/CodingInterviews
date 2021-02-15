@@ -19,7 +19,7 @@ phases:
 # Python
       - pushd rom-to-dec && pytest --html=../reports/python/rom-to-dec.html --self-contained-html
 # Up reports
-      - aws s3 sync reports/ s3://codinginterviews.caravana.cloud/ --delete
+      - aws s3 sync target/reports/ s3://codinginterviews.caravana.cloud/ --delete
 cache:
   paths:
     - '/root/.m2/**/*'
