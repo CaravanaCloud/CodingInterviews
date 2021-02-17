@@ -1,6 +1,45 @@
-# CodingInterviews
+# Coding Interviews
 
 Preparation and practice for coding interviews
+
+Hope you enjoy and help is more than welcome :)
+
+# Problems by Dificulty
+
+## A1
+1D problems, arithmetic
+
+- binomial-coef
+- counting-swaps
+- hills-count
+- last-repeat
+- parent/val
+- rom-to-dec
+
+## A2
+2D problems, simulations
+
+- gifting-groups
+- queens-II
+- star-ratings
+
+## B1
+Hashes, Dynamic Programming
+
+## B2
+Union-Find
+
+- cheap-trip
+- countries-count
+- path-find
+
+## C1
+Graphs, Trees & Abstract Data Structures
+
+- robot-loop
+
+## C2
+Notorious Algorithms & Extra Challenges
 
 # Test Reports (Build at AWS)
 
