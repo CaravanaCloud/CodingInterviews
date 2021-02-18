@@ -13,17 +13,18 @@ public class CountingSwaps {
     public static Integer naiveSwaps(List<Integer> xs){
         if (xs == null) return 0;
         Integer count = 0;
-        // System.out.println(xs);
         for (int i = 0; i < xs.size() - 1 ; i++) {
+            boolean sorted = true;
             for (int j = i+1; j < xs.size() ; j++) {
                 if ( xs.get(j) < xs.get(i) ){
                     Integer aux = xs.get(i);
                     xs.set(i, xs.get(j));
                     xs.set(j, aux);
                     count += 1;
-                    // System.out.println(xs);
+                    sorted = false;
                 }
             }
+            if (sorted) break;
         }
         return count;
     }

@@ -19,6 +19,7 @@
     <module>counting-swaps</module>
     <module>robot-loop</module>
     <module>cheapest-trip</module>
+    <module>pair-sum</module>
   </modules>
 
 

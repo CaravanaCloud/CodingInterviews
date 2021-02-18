@@ -1,16 +1,16 @@
 package cloud.caravana;
 
+import java.util.*;
+import org.junit.*;
 import static org.junit.Assert.*;
 
-import org.junit.*;
-import java.util.*;
 
 import static cloud.caravana.CountingSwaps.*;
 
 public class CountingSwapsTest
 {
 
-    @Test(timeout = 10000L)
+    @Test//(timeout = 10000L)
     public void test50K() {
         List<Integer> xs = new ArrayList<>();
         Random rand = new Random(0);
