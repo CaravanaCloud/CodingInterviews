@@ -20,6 +20,7 @@
     <module>robot-loop</module>
     <module>cheapest-trip</module>
     <module>pair-sum</module>
+    <module>trio-sum</module>
   </modules>
 
 
