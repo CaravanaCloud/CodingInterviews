@@ -18,7 +18,7 @@
   <modules>
     <module>counting-swaps</module>
     <module>robot-loop</module>
-    <module>cheapest-trip</module>
+    <module>cheap-trip</module>
     <module>pair-sum</module>
     <module>trio-sum</module>
   </modules>
