@@ -1,3 +1,0 @@
-PyUnitReport==0.1.4
-Flask==1.0.2
-pytest-html==3.1.1

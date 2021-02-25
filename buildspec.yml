@@ -18,6 +18,7 @@ phases:
       - mv target/site/* target/reports/java/
 # Python
       - pushd rom-to-dec && pytest --html=../target/reports/python/rom-to-dec.html --self-contained-html && popd
+      - pushd bcoef && pytest --html=../target/reports/python/bcoef.html --self-contained-html && popd
 # Publish reports 
       - pwd
       - ls -liah
