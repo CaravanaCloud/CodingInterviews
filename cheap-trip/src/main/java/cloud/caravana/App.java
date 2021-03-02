@@ -2,10 +2,6 @@ package cloud.caravana;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args ) {
