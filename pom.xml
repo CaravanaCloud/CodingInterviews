@@ -16,11 +16,11 @@
 
 
   <modules>
-    <module>counting-swaps</module>
-    <module>robot-loop</module>
-    <module>cheap-trip</module>
-    <module>pair-sum</module>
-    <module>trio-sum</module>
+    <module>count-swaps-java</module>
+    <module>robot-loop-java</module>
+    <module>cheap-trip-java</module>
+    <module>pair-sum-java</module>
+    <module>trio-sum-java</module>
   </modules>
 
 

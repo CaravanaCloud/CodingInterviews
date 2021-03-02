@@ -5,30 +5,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cloud.caravana</groupId>
-  <artifactId>counting-swaps</artifactId>
+  <artifactId>trio-sum-java</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>counting-swaps</name>
+  <name>trio-sum</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>11</source>
-          <target>11</target>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>

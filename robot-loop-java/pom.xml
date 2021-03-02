@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cloud.caravana</groupId>
-  <artifactId>robot-loop</artifactId>
+  <artifactId>robot-loop-java</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>robot-loop</name>
