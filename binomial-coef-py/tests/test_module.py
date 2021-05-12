@@ -5,3 +5,7 @@ def test_A():
 
 def test_B():
     assert binomial(5,3) == 10
+
+def test_C():
+    assert binomial(20,10) == 184756
+

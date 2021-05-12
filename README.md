@@ -1,56 +1,41 @@
 # Coding Interviews
 
-Preparation and practice for coding interviews
+Preparation and practice for coding interviews.
 
 Hope you enjoy and help is more than welcome :)
 
-# Problems by Dificulty
+# Arithmetic, Lists & Iteration
+[Pair Sum (Java)](./pair-sum-java)
 
-## A1
-1D problems, arithmetic
+[Trio Sum (Java)](./trio-sum-java)
 
-- binomial-coef
-- counting-swaps
-- hills-count
-- last-repeat
-- parent/val
-- rom-to-dec
+[Binomial Coeficient (Python)](./binomial-coef-py)
 
-## A2
-2D problems, simulations
+[Roman to Decimal (Python)](./rom-to-dec-py)
 
-- gifting-groups
-- queens-II
-- star-ratings
+[Count Swaps (Java)](./count-swaps-java)
 
-## B1
-Hashes, Dynamic Programming
+[Gifting Groups (Java)](./gifting-groups)
 
-## B2
-Union-Find
+[Hills Count](./hills-count)
 
-- cheap-trip
-- countries-count
-- path-find
+[Last Repeat](./last-repeat)
 
-## C1
-Graphs, Trees & Abstract Data Structures
+[Validate Parenthesis](./parent-val)
 
-- robot-loop
+[Validate Parenthesis](./star-ratings)
 
-## C2
-Notorious Algorithms & Extra Challenges
+# Object Orientation
+[Iter Keeper (Java)](./iter-keeper-java)
 
-# Test Reports (Build at AWS)
+# 2D Algorithms
+[Queens II (Java)](./queens-II)
 
-* http://codinginterviews.caravana.cloud/java/
-* http://codinginterviews.caravana.cloud/python/rom-to-dec.html
+[Robot Loop (Java)](./robot-loop-java)
 
-# Local Build
-```
-git clone https://github.com/aws/aws-codebuild-docker-images.git
-cd  aws-codebuild-docker-images/ubuntu/standard/4.0
-docker build -t aws/codebuild/standard:4.0 .
-docker pull amazon/aws-codebuild-local:latest --disable-content-trust=false
-./build.sh
-```
+[Countries Count (TODO)](./countries-count)
+
+[Find Path (TODO)](./path-find)
+
+# Notorious Algorithms
+[Cheap Trip (Java)](./cheap-trip-java)
