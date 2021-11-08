@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import javax.xml.validation.Validator;
 import java.util.List;
+
+import static cloud.caravana.CIGPerf.componentsInGraph;
+import static cloud.caravana.Util.parseInput;
 import static java.util.List.of;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -50,7 +53,13 @@ class CIGNaiveTest {
         assertIterableEquals(of(11,11), result);
     }
 
-
+    @Test
+    //@Timeout(3)
+    public void testCase19(){
+        var input19 = parseInput("input19.txt");
+        var result = CIGNaive.componentsInGraph(input19);
+        assertIterableEquals(of(2,866), result);
+    }
 
 
 }

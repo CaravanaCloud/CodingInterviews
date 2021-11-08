@@ -6,24 +6,32 @@ import org.junit.jupiter.api.Timeout;
 
 import java.util.List;
 
+import static cloud.caravana.CIGPerf.*;
+import static cloud.caravana.Util.*;
 import static java.util.List.of;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CIGPerfTest {
-    static List<List<Integer>> input19 = null;
+    static List<List<Integer>> input19,
+            input07, input10, input30 = null;
 
     @BeforeAll
     public static void setup(){
-        input19 = Util.parseInput("input19.txt");
+        input07 = parseInput("input07.txt");
+        input10 = parseInput("input10.txt");
+        input19 = parseInput("input19.txt");
+        input30 = parseInput("input30.txt");
     }
+    
     @Test
     public void testCaseA(){
         var a = List.of(1,5);
         var b = List.of(1,6);
         var c = List.of(2,4);
         var bg = List.of(a,b,c);
-        var result = CIGPerf.componentsInGraph(bg);
-        assertIterableEquals(List.of(2,3), result);
+        var result = componentsInGraph(bg);
+        assertEquals(2, result.get(0));
+        assertEquals(3, result.get(1));
     }
 
     @Test
@@ -34,7 +42,7 @@ class CIGPerfTest {
                 List.of(3,8),
                 List.of(4,9),
                 List.of(2,6));
-        var result = CIGPerf.componentsInGraph(bg);
+        var result = componentsInGraph(bg);
         assertIterableEquals(List.of(2,4), result);
     }
 
@@ -51,14 +59,35 @@ class CIGPerfTest {
                 of(8, 13),
                 of(2, 15),
                 of(5, 20));
-        var result = CIGPerf.componentsInGraph(bg);
+        var result = componentsInGraph(bg);
         assertIterableEquals(of(11,11), result);
     }
 
     @Test
     //@Timeout(3)
+    public void testCase07(){
+        var result = componentsInGraph(input07);
+        assertIterableEquals(of(1197, 1197), result);
+    }
+
+    @Test
+    //@Timeout(3)
+    public void testCase10(){
+        var result = componentsInGraph(input10);
+        assertIterableEquals(of(1872, 1872), result);
+    }
+
+    @Test
+    //@Timeout(3)
     public void testCase19(){
-        var result = CIGPerf.componentsInGraph(input19);
+        var result = componentsInGraph(input19);
         assertIterableEquals(of(2,866), result);
+    }
+
+    @Test
+    //@Timeout(3)
+    public void testCase30(){
+        var result = componentsInGraph(input30);
+        assertIterableEquals(of(2, 1527), result);
     }
 }
