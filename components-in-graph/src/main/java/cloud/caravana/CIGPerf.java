@@ -1,6 +1,7 @@
 package cloud.caravana;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.stream.Collectors.joining;
 
@@ -15,23 +16,15 @@ class CIGPerf {
             union(parents, sizes, a, b);
         }
 
-
         Integer min = Integer.MAX_VALUE;
         Integer max = Integer.MIN_VALUE;
+
         for(Map.Entry<Integer, Integer> entry:sizes.entrySet()) {
             var size = entry.getValue();
             if (size > max) max = size;
             if (size < min && size > 1) min = size;
         }
         return List.of(min,max);
-    }
-
-    private static void print(HashMap<Integer, Integer> components, HashMap<Integer, Integer> sizes) {
-        System.out.println("COMPONENTS ---");
-        components.forEach((key, value) -> System.out.println(key + " : "+ value));
-        System.out.println("SIZES ---");
-        components.forEach((key, value) -> System.out.println(key + " : "+ value));
-
     }
 
     private static void union(HashMap<Integer, Integer> parents,
@@ -42,13 +35,14 @@ class CIGPerf {
         if (rootA.equals(rootB)) return;
         var sizeA = sizes.getOrDefault(rootA, 1);
         var sizeB = sizes.getOrDefault(rootB, 1);
+        var newSize = sizeA + sizeB;
         if (sizeA < sizeB){
             parents.put(rootA, rootB);
-            sizes.put(rootB, sizeB + sizeA);
+            sizes.put(rootB, newSize);
             sizes.remove(rootA);
         }else {
             parents.put(rootB, rootA);
-            sizes.put(rootA, sizeA + sizeB);
+            sizes.put(rootA, newSize);
             sizes.remove(rootB);
         }
     }

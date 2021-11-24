@@ -1,6 +1,7 @@
 package cloud.caravana;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import javax.xml.validation.Validator;
 import java.util.List;
@@ -54,7 +55,7 @@ class CIGNaiveTest {
     }
 
     @Test
-    //@Timeout(3)
+    ///@Timeout(3)
     public void testCase19(){
         var input19 = parseInput("input19.txt");
         var result = CIGNaive.componentsInGraph(input19);

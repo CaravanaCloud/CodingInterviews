@@ -13,31 +13,28 @@ import io.vertx.core.json.JsonObject;
 @Path("/simian")
 public class SimianResource {
 
-    boolean isSimian (String[] dna){
-        //TODO (Mentoria de Sexta): Implement this method
-        var rand = new java.util.Random().nextInt();
-        return rand % 2 == 0;
-    }
+    
 
-    // export JSON_BODY='{"dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]}'
-    // curl -v -d "$JSON_BODY" -H "Content-Type: application/json" -X POST http://localhost:8080/simian
+    // export TEXT_BODY='{"dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]}'
+    // curl -v -d "$TEXT_BODY" -H "Content-Type: text/plain" -X POST http://localhost:8080/simian
     @POST
     @Produces(MediaType.TEXT_PLAIN)
-    public Response isSimian(JsonObject obj) {
+    public Response isSimian(String input) {
+        JsonObject obj = new JsonObject(input);
         Object[] objs = obj.getJsonArray("dna").getList().toArray();
         //TODO: Cast array without copying
         String[] dna = Arrays.stream(objs).toArray(String[]::new);
-        var dnaStr = Arrays.toString(dna); 
-        var isSimian = isSimian(dna);
+        var isSimian = SimianAlgo.isSimian(dna);
+        var output = "" + isSimian +"\n";
         if (isSimian)  {
             return Response
                 .status(Response.Status.OK)
-                .entity(dnaStr)
+                .entity(output)
                 .build();
         } else {
             return Response
                 .status(Response.Status.FORBIDDEN)
-                .entity(dnaStr)
+                .entity(output)
                 .build();
         }
     }

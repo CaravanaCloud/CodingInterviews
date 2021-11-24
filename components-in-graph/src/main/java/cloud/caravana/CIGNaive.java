@@ -48,7 +48,6 @@ class CIGNaive {
         }
         return List.of(min,max);
     }
-
     private static void print(HashMap<Integer, Integer> components, HashMap<Integer, Integer> sizes, int min, int max) {
         System.out.println("COMPONENTS ---");
         components.forEach((key, value) -> System.out.println(key + " : "+ value));
