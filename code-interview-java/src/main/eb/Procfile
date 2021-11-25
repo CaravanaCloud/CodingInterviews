@@ -1,0 +1,1 @@
+web: java -jar code-interview-java-1.0.0-SNAPSHOT-runner.jar
