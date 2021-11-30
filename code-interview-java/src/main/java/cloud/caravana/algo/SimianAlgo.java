@@ -1,4 +1,6 @@
-package cloud.caravana;
+package cloud.caravana.algo;
+
+import cloud.caravana.Util;
 
 public class SimianAlgo {
 
@@ -65,7 +67,7 @@ public class SimianAlgo {
         return false;
     }
 
-    static boolean isSimian (String[] dna){
+    public static Boolean isSimian (String[] dna){
         if (dna == null) return false;
         for(var i=0; i < dna.length; i++){
             var line = dna[i];
@@ -77,5 +79,10 @@ public class SimianAlgo {
                     }
                 }
         return false;
+    }
+
+    static String isSimian (String dnaStr){
+        String[] dna = Util.linesToArray(dnaStr);
+        return isSimian(dna).toString();
     }
 }

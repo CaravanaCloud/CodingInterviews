@@ -1,8 +1,8 @@
-package cloud.caravana;
+package cloud.caravana.algo;
 
-import static cloud.caravana.SimianAlgo.isSimian;
 import io.quarkus.test.junit.QuarkusTest;
 
+import static cloud.caravana.algo.SimianAlgo.isSimian;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -147,5 +147,18 @@ public class TestSimianAlgo {
             "CAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCAGTGCACCCC"
         };
         assertTrue(isSimian(dna));
+    }
+
+    @Test
+    public void testStringInterface(){
+        var dna = """
+                AAAAGX
+                CAGTTX
+                TTTCGX
+                YYYYYX
+                CCCAGX
+                TCACTX
+                """;
+        assertTrue(Boolean.valueOf(isSimian(dna)));
     }
 }

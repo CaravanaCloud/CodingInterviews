@@ -49,15 +49,6 @@ export EB_ENV="$UNIQ-eb-env-$EB_VERSION_LABEL"
 echo "EB_TEMPLATE=$EB_TEMPLATE"
 echo "EB_ENV=$EB_ENV"
 echo "#"
-echo aws elasticbeanstalk create-environment \
-    --cname-prefix "$EB_CNAME" \
-    --application-name "$EB_APP" \
-    --template-name "$EB_TEMPLATE" \
-    --version-label "$EB_VERSION_LABEL" \
-    --environment-name "$EB_ENV" \
-    --output "json" \
-    --option-settings "file://$DIR/options.txt"
-echo "#"
 
 #    --template-name "$EB_TEMPLATE" \
 export EB_STACK_NAME="64bit Amazon Linux 2 v3.2.8 running Corretto 11"
