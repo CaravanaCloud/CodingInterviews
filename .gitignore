@@ -31,3 +31,6 @@ target/
 *.pyc
 .eggs/
 *.egg-info
+
+.envrc
+.env

@@ -5,8 +5,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
-import io.vertx.core.cli.Option;
-
 public class Algos {
     private static final Map<String, Function<String, String>> algos = new HashMap<>() {
         {
