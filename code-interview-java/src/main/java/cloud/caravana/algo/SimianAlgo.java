@@ -2,6 +2,7 @@ package cloud.caravana.algo;
 
 import cloud.caravana.Util;
 
+
 public class SimianAlgo {
 
     static Character charAt(String[] dna, int i, int j){
@@ -81,7 +82,7 @@ public class SimianAlgo {
         return false;
     }
 
-    static String isSimian (String dnaStr){
+    public static String isSimian (String dnaStr){
         String[] dna = Util.linesToArray(dnaStr);
         return isSimian(dna).toString();
     }

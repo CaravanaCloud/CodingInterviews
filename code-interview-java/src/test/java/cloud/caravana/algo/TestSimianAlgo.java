@@ -8,6 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.*;
+
 @QuarkusTest
 public class TestSimianAlgo {
     @Test
@@ -160,5 +163,27 @@ public class TestSimianAlgo {
                 TCACTX
                 """;
         assertTrue(Boolean.valueOf(isSimian(dna)));
+    }
+
+    @Test
+    public void testRESTful() {
+        given()
+          .when()
+            .body("{\"dna\": [\"AAAAGX\"]}")
+            .contentType("application/json")
+            .post("/simian")
+          .then()
+             .statusCode(200);
+    }
+
+    @Test
+    public void testRESTfulNotSimian() {
+        given()
+          .when()
+            .body("{\"dna\": [\"AAAGGX\"]}")
+            .contentType("application/json")
+            .post("/simian")
+          .then()
+             .statusCode(403);
     }
 }
