@@ -14,8 +14,8 @@ import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import javax.transaction.Transactional;
 
-import cloud.caravana.algo.SimianAlgo;
-import cloud.caravana.data.SimianData;
+import cloud.caravana.algo.simian.SimianAlgo;
+import cloud.caravana.algo.simian.SimianData;
 
 
 @ApplicationScoped
@@ -53,7 +53,6 @@ public class SimianService {
         try {
             digest = MessageDigest.getInstance("SHA-256");
         } catch (NoSuchAlgorithmException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             throw new RuntimeException(e);
         }

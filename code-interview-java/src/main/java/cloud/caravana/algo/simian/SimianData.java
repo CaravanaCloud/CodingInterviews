@@ -1,4 +1,4 @@
-package cloud.caravana.data;
+package cloud.caravana.algo.simian;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

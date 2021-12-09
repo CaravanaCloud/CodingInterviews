@@ -1,18 +1,17 @@
-package cloud.caravana.algo;
+package cloud.caravana.algo.simian;
 
 import io.quarkus.test.junit.QuarkusTest;
 
-import static cloud.caravana.algo.SimianAlgo.isSimian;
+import static cloud.caravana.algo.simian.SimianAlgo.isSimian;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
-import static org.hamcrest.CoreMatchers.*;
 
 @QuarkusTest
-public class TestSimianAlgo {
+public class SimianAlgoTest {
     @Test
     public void testPositiveRight(){
         var dna = new String[]{

@@ -1,4 +1,4 @@
-package cloud.caravana.algo;
+package cloud.caravana.algo.simian;
 
 import cloud.caravana.Util;
 

@@ -1,11 +1,8 @@
-package cloud.caravana.rs;
+package cloud.caravana.algo.simian;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 import java.util.stream.Stream;
 
 import javax.inject.Inject;
@@ -16,7 +13,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import cloud.caravana.algo.SimianAlgo;
 import cloud.caravana.service.SimianService;
 import io.vertx.core.json.*;
 
@@ -63,6 +59,7 @@ public class SimianResource {
     @Produces(MediaType.TEXT_PLAIN)
     public Response isSimian(String input) {
         JsonObject obj = new JsonObject(input);
+        @SuppressWarnings("unchecked")
         Stream<String> objs = obj.getJsonArray("dna").getList().stream().map(o -> o.toString());
         String[] dna = objs.toArray(String[]::new);
         var isSimian = simians.isSimian(dna);
